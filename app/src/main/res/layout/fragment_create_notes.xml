@@ -14,6 +14,7 @@
         android:paddingStart="10dp">
 
         <EditText
+            android:id="@+id/edit_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -25,6 +26,7 @@
             android:textColorHint="#D1D1D1"/>
 
         <EditText
+            android:id="@+id/edit_subtitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -35,7 +37,36 @@
             android:fontFamily="@font/product_sans_regular"
             android:textColorHint="#D1D1D1"/>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/pRed"
+                android:background="@drawable/red_dot"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="20dp"
+                android:id="@+id/pYellow"
+                android:background="@drawable/yellow_dot"/>
+            <ImageView
+                android:id="@+id/pGreen"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/green_dot"/>
+
+
+        </LinearLayout>
+
         <EditText
+            android:id="@+id/edit_notes"
             android:layout_width="match_parent"
             android:layout_height="365dp"
             android:layout_marginTop="10dp"
@@ -44,7 +75,6 @@
             android:padding="15dp"
             android:gravity="start"
             android:maxLines="1"
-
             android:fontFamily="@font/product_sans_regular"
             android:textColorHint="#D1D1D1"/>
 
@@ -54,7 +84,7 @@
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btnDoneNotes"
+        android:id="@+id/btnSaveNotes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
