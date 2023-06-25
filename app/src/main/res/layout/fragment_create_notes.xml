@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bac_color"
+    tools:context=".ui.Fragment.CreateNotesFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_txt_shape"
+            android:hint="@string/title"
+            android:padding="15dp"
+            android:maxLines="1"
+            android:fontFamily="@font/product_sans_regular"
+            android:textColorHint="#D1D1D1"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_txt_shape"
+            android:hint="@string/subtitle"
+            android:padding="15dp"
+            android:maxLines="1"
+            android:fontFamily="@font/product_sans_regular"
+            android:textColorHint="#D1D1D1"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="365dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_txt_shape"
+            android:hint="@string/notes"
+            android:padding="15dp"
+            android:gravity="start"
+            android:maxLines="1"
+
+            android:fontFamily="@font/product_sans_regular"
+            android:textColorHint="#D1D1D1"/>
+
+
+    </LinearLayout>
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnDoneNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:backgroundTint="@color/red_color"
+        android:src="@drawable/baseline_done_24"
+        android:layout_gravity="bottom||right"/>
+
+
+</FrameLayout>

@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Notes App</string>
     <string name="sub_title">Life is to Fast so don\'t forget anything just Note it!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title">Title....</string>
+    <string name="subtitle">Subtitle....</string>
+    <string name="notes">Notes...</string>
 </resources>
