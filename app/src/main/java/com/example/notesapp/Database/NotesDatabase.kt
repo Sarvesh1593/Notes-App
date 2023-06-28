@@ -30,7 +30,7 @@ abstract class NotesDatabase : RoomDatabase() {
                 val roomDatabaseInstance = Room.databaseBuilder(context,NotesDatabase::class.java,"Notes").allowMainThreadQueries().build()
 
                 INSTANCE = roomDatabaseInstance
-                return return roomDatabaseInstance
+                 return roomDatabaseInstance
             }
         }
     }

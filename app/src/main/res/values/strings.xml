@@ -9,4 +9,8 @@
     <string name="_23_march_2023">23 March 2023</string>
     <string name="no">No</string>
     <string name="yes">Yes</string>
+    <string name="low">Low</string>
+    <string name="medium">Medium</string>
+    <string name="high">High</string>
+    <string name="delete">Delete</string>
 </resources>

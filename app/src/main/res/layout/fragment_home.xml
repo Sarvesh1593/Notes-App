@@ -11,24 +11,88 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/getAllNotes"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/filtering"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:id="@+id/filter_high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/high"
+                android:fontFamily="@font/product_sans_regular"
+                android:textColor="@color/red_color"
+                android:textSize="18sp"
+                android:background="@drawable/btn_filter_shape"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="10dp"/>
+            <TextView
+                android:id="@+id/filter_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/medium"
+                android:fontFamily="@font/product_sans_regular"
+                android:textColor="@color/yellow_color"
+                android:textSize="18sp"
+                android:background="@drawable/btn_filter_shape"
+                android:paddingStart="30dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="10dp"/>
+            <TextView
+                android:id="@+id/filter_low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/low"
+                android:fontFamily="@font/product_sans_regular"
+                android:textColor="@color/green_color"
+                android:textSize="18sp"
+                android:background="@drawable/btn_filter_shape"
+                android:paddingStart="30dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerNotes"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnAddNotes"
-            android:backgroundTint="@color/red_color"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/red_color"
             android:layout_margin="30dp"
             android:src="@drawable/baseline_add_24"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
+

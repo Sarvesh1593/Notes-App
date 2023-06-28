@@ -2,7 +2,10 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id 'kotlin-parcelize'
 }
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
 
 android {
     namespace 'com.example.notesapp'
@@ -34,10 +37,21 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    buildscript {
+        dependencies {
+            classpath "com.android.tools.build:gradle:7.0.2"
+            classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.30"
+            classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.6.0"
+            classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.32"
+        }
+    }
+
 
 }
 
 dependencies {
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
     constraints {
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.0") {
             because("kotlin-stdlib-jdk7 is now a part of kotlin-stdlib")
@@ -57,6 +71,7 @@ dependencies {
     implementation "androidx.fragment:fragment-ktx:$fragment_version"
     implementation 'androidx.navigation:navigation-fragment-ktx:2.6.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.6.0'
+    implementation 'androidx.recyclerview:recyclerview:1.3.0'
 
 
     //Room Database
@@ -73,10 +88,11 @@ dependencies {
     implementation 'androidx.activity:activity-ktx:1.7.2'
 
     // Kotlin components
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20"
 
     //coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
 
 }
+

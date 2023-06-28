@@ -86,10 +86,11 @@
         android:id="@+id/btnEditSaveNotes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
+        android:layout_margin="20dp"
         android:backgroundTint="@color/red_color"
         android:src="@drawable/baseline_done_24"
-        android:layout_gravity="bottom|right"/>
+        android:layout_gravity="bottom|end"/>
+
 
 
 </FrameLayout>
