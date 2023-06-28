@@ -1,5 +1,6 @@
-package com.example.notesapp
+package com.mack.notesapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
@@ -16,9 +17,10 @@ class MainActivity : AppCompatActivity() {
         navController = findNavController(R.id.fragmentContainerView)
 
         setupActionBarWithNavController(navController)
-    }
 
+    }
     override fun onNavigateUp(): Boolean {
         return navController.navigateUp() || super.onNavigateUp()
     }
+
 }

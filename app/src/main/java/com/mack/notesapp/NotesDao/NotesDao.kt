@@ -1,4 +1,4 @@
-package com.example.notesapp.NotesDao
+package com.mack.notesapp.NotesDao
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
@@ -6,7 +6,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import com.example.notesapp.NotesEntity.Notes
+import com.mack.notesapp.NotesEntity.Notes
 
 @Dao
 interface NotesDao {

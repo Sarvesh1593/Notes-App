@@ -4,12 +4,10 @@ import android.os.Bundle
 import android.text.format.DateFormat
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
-import androidx.navigation.Navigation
 import com.example.notesapp.NotesEntity.Notes
 import com.example.notesapp.R
 import com.example.notesapp.ViewModel.NotesViewModel
@@ -78,9 +76,6 @@ class CreateNotesFragment : Fragment() {
 
         Toast.makeText(requireContext(),"Notes Created Successfully",Toast.LENGTH_SHORT).show()
 
-        Navigation.findNavController(it!!).navigate(R.id.action_createNotesFragment_to_homeFragment)
-
 
     }
 }
-

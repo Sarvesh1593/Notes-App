@@ -1,11 +1,11 @@
-package com.example.notesapp.ViewModel
+package com.mack.notesapp.ViewModel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import com.example.notesapp.Database.NotesDatabase
-import com.example.notesapp.NotesEntity.Notes
-import com.example.notesapp.Repository.NotesRepository
+import com.mack.notesapp.Database.NotesDatabase
+import com.mack.notesapp.NotesEntity.Notes
+import com.mack.notesapp.Repository.NotesRepository
 
 class NotesViewModel(application: Application): AndroidViewModel(application) {
 

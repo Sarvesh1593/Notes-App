@@ -1,11 +1,10 @@
-package com.example.notesapp.NotesEntity
+package com.mack.notesapp.NotesEntity
 
 
 import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
-
 @Parcelize
 @Entity(tableName = "Notes")
 data class Notes(

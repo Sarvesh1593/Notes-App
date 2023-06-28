@@ -1,20 +1,16 @@
-package com.example.notesapp.Database
+package com.mack.notesapp.Database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import androidx.sqlite.db.SupportSQLiteDatabase
 
-import com.example.notesapp.NotesDao.NotesDao
-import com.example.notesapp.NotesEntity.Notes
+import com.mack.notesapp.NotesDao.NotesDao
+import com.mack.notesapp.NotesEntity.Notes
 
 @Database(entities = [Notes::class], version = 1, exportSchema = false)
 abstract class NotesDatabase : RoomDatabase() {
     abstract fun myDao() : NotesDao
-
-
-
     companion object{
 
         @Volatile
@@ -27,8 +23,10 @@ abstract class NotesDatabase : RoomDatabase() {
                 return tempInstance
             }
             synchronized(this){
-                val roomDatabaseInstance = Room.databaseBuilder(context,NotesDatabase::class.java,"Notes").allowMainThreadQueries().build()
-
+                val roomDatabaseInstance = Room.databaseBuilder(context,
+                    NotesDatabase::class.java,
+                    "Notes")
+                    .allowMainThreadQueries().build()
                 INSTANCE = roomDatabaseInstance
                  return roomDatabaseInstance
             }

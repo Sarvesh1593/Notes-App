@@ -1,5 +1,6 @@
-package com.example.notesapp.ui.Fragment
+package com.mack.notesapp.ui.Fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,14 +9,15 @@ import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SearchView
+import androidx.activity.addCallback
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.example.notesapp.NotesEntity.Notes
-import com.example.notesapp.R
-import com.example.notesapp.ViewModel.NotesViewModel
-import com.example.notesapp.databinding.FragmentHomeBinding
-import com.example.notesapp.ui.Adapter.NotesAdapter
+import com.mack.notesapp.NotesEntity.Notes
+import com.mack.notesapp.R
+import com.mack.notesapp.ViewModel.NotesViewModel
+import com.mack.notesapp.databinding.FragmentHomeBinding
+import com.mack.notesapp.ui.Adapter.NotesAdapter
 
 
 class HomeFragment : Fragment() {
@@ -30,6 +32,10 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(layoutInflater,container,false)
         setHasOptionsMenu(true)
+
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
+            navigateToHomeScreen()
+        }
 
         viewModel.getNotes().observe(viewLifecycleOwner) { notes ->
             oldMyNotes = notes as ArrayList<Notes>
@@ -76,6 +82,12 @@ class HomeFragment : Fragment() {
         return binding.root
 
     }
+    private fun navigateToHomeScreen() {
+        val intent = Intent(Intent.ACTION_MAIN)
+        intent.addCategory(Intent.CATEGORY_HOME)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        startActivity(intent)
+    }
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.search_menu,menu)
 
@@ -91,9 +103,6 @@ class HomeFragment : Fragment() {
                 notesFiltering(newText)
                 return true
             }
-
-
-
         })
         super.onCreateOptionsMenu(menu, inflater)
     }
@@ -106,7 +115,6 @@ class HomeFragment : Fragment() {
             }
         }
         adapter.filtering(newFilterList)
-
     }
 }
 

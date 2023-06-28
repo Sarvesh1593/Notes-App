@@ -73,7 +73,6 @@
             android:hint="@string/notes"
             android:padding="15dp"
             android:gravity="start"
-            android:maxLines="1"
             android:fontFamily="@font/product_sans_regular"
             android:textColorHint="#D1D1D1"/>
 

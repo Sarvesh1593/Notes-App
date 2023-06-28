@@ -1,5 +1,6 @@
-package com.example.notesapp.ui.Fragment
+package com.mack.notesapp.ui.Fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.format.DateFormat
 import androidx.fragment.app.Fragment
@@ -11,14 +12,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.example.notesapp.NotesEntity.Notes
-import com.example.notesapp.R
-import com.example.notesapp.ViewModel.NotesViewModel
-import com.example.notesapp.databinding.FragmentEditNotesBinding
+import com.mack.notesapp.NotesEntity.Notes
+import com.mack.notesapp.R
+import com.mack.notesapp.ViewModel.NotesViewModel
+import com.mack.notesapp.databinding.FragmentEditNotesBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import java.util.Date
 
@@ -28,11 +29,13 @@ class EditNotesFragment : Fragment() {
     private lateinit var binding:FragmentEditNotesBinding
     var priority : String = "1"
     val viewModel : NotesViewModel by viewModels()
-
+    private var onBackPressedCallback: OnBackPressedCallback? = null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+
         // Inflate the layout for this fragment
         binding=FragmentEditNotesBinding.inflate(layoutInflater,container,false)
         setHasOptionsMenu(true)
@@ -91,6 +94,11 @@ class EditNotesFragment : Fragment() {
 
     }
 
+    private fun navigateBackToHome() {
+        val navController = Navigation.findNavController(requireView())
+        navController.navigate(R.id.action_editNotesFragment_to_homeFragment2)
+    }
+
     private fun updateNotes(it: View?) {
 
         val title = binding.editTitle.text.toString()
@@ -143,7 +151,10 @@ class EditNotesFragment : Fragment() {
                 bottomSheet.dismiss()
             }
         }
+
         return super.onOptionsItemSelected(item)
     }
+
+
 
 }

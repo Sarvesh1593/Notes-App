@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.notesapp.ui.Fragment.HomeFragment"
+        android:name="com.mack.notesapp.ui.Fragment.HomeFragment"
         android:label="Notes App"
         tools:layout="@layout/fragment_home" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/createNotesFragment"
-        android:name="com.example.notesapp.ui.Fragment.CreateNotesFragment"
+        android:name="com.mack.notesapp.ui.Fragment.CreateNotesFragment"
         android:label="Create New Notes"
         tools:layout="@layout/fragment_create_notes" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/editNotesFragment"
-        android:name="com.example.notesapp.ui.Fragment.EditNotesFragment"
+        android:name="com.mack.notesapp.ui.Fragment.EditNotesFragment"
         android:label="Edit Notes"
         tools:layout="@layout/fragment_edit_notes" >
         <action
@@ -36,6 +36,6 @@
             app:destination="@id/homeFragment" />
         <argument
             android:name="data"
-            app:argType="com.example.notesapp.NotesEntity.Notes" />
+            app:argType="com.mack.notesapp.NotesEntity.Notes" />
     </fragment>
 </navigation>
