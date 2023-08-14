@@ -8,10 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
-import com.example.notesapp.NotesEntity.Notes
-import com.example.notesapp.R
-import com.example.notesapp.ViewModel.NotesViewModel
-import com.example.notesapp.databinding.FragmentCreateNotesBinding
+import com.mack.notesapp.NotesEntity.Notes
+import com.mack.notesapp.R
+import com.mack.notesapp.ViewModel.NotesViewModel
+import com.mack.notesapp.databinding.FragmentCreateNotesBinding
 import java.util.Date
 
 class CreateNotesFragment : Fragment() {
