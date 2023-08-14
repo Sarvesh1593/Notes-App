@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="layout_margin_start">10dp</dimen>
+    <dimen name="layout_margin_end">10dp</dimen>
+    <dimen name="layout_margin_top">5dp</dimen>
+    <dimen name="text_view_padding_horizontal">10dp</dimen>
+    <dimen name="text_view_padding_vertical">10dp</dimen>
+    <dimen name="layout_weight_text_view">1</dimen>
+    <dimen name="layout_margin_between_views">5dp</dimen>
+</resources>

@@ -16,63 +16,77 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_margin="10dp"
+            android:layout_marginStart="@dimen/layout_margin_start"
+            android:layout_marginEnd="@dimen/layout_margin_end"
             android:gravity="center_vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/layout_margin_top">
 
             <ImageView
                 android:id="@+id/getAllNotes"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:background="@drawable/filtering"
-                android:layout_margin="5dp"/>
+                android:layout_margin="5dp"
+                android:src="@drawable/filtering" />
 
             <TextView
                 android:id="@+id/filter_high"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/high"
                 android:fontFamily="@font/product_sans_regular"
                 android:textColor="#F14937"
-                android:textSize="18sp"
+                android:textSize="15sp"
                 android:background="@drawable/btn_filter_shape"
-                android:paddingStart="20dp"
-                android:paddingTop="10dp"
-                android:paddingEnd="20dp"
-                android:paddingBottom="10dp"
-                android:layout_marginStart="10dp"/>
+                android:paddingStart="@dimen/text_view_padding_horizontal"
+                android:paddingTop="@dimen/text_view_padding_vertical"
+                android:paddingEnd="@dimen/text_view_padding_horizontal"
+                android:paddingBottom="@dimen/text_view_padding_vertical"
+                android:layout_marginStart="@dimen/layout_margin_start"
+                android:layout_marginEnd="@dimen/layout_margin_end"
+                android:layout_weight="@dimen/layout_weight_text_view"
+                android:gravity="center"/>
+
             <TextView
                 android:id="@+id/filter_medium"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/medium"
                 android:fontFamily="@font/product_sans_regular"
                 android:textColor="@color/yellow_color"
-                android:textSize="18sp"
+                android:textSize="15sp"
                 android:background="@drawable/btn_filter_shape"
-                android:paddingStart="30dp"
-                android:paddingTop="10dp"
-                android:paddingEnd="30dp"
-                android:paddingBottom="10dp"
-                android:layout_marginStart="10dp"/>
+                android:paddingStart="@dimen/text_view_padding_horizontal"
+                android:paddingTop="@dimen/text_view_padding_vertical"
+                android:paddingEnd="@dimen/text_view_padding_horizontal"
+                android:paddingBottom="@dimen/text_view_padding_vertical"
+                android:layout_marginStart="@dimen/layout_margin_start"
+                android:layout_marginEnd="@dimen/layout_margin_between_views"
+                android:layout_weight="@dimen/layout_weight_text_view"
+                android:gravity="center"
+                android:singleLine="true" />
+
+
             <TextView
                 android:id="@+id/filter_low"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/low"
                 android:fontFamily="@font/product_sans_regular"
                 android:textColor="@color/green_color"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:background="@drawable/btn_filter_shape"
-                android:paddingStart="10dp"
-                android:paddingTop="10dp"
-                android:paddingEnd="30dp"
-                android:paddingBottom="10dp"
-                android:layout_marginStart="10dp"/>
+                android:paddingStart="@dimen/text_view_padding_horizontal"
+                android:paddingTop="@dimen/text_view_padding_vertical"
+                android:paddingEnd="@dimen/text_view_padding_horizontal"
+                android:paddingBottom="@dimen/text_view_padding_vertical"
+                android:layout_marginStart="@dimen/layout_margin_start"
+                android:layout_marginEnd="@dimen/layout_margin_end"
+                android:layout_weight="@dimen/layout_weight_text_view"
+                android:gravity="center"/>
 
         </LinearLayout>
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerNotes"
